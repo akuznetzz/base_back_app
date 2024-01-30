@@ -34,6 +34,7 @@ dependencies = [
     "dynamic-rest @ file:///${PROJECT_ROOT}/dynamic-rest-master",
     "mypy>=1.8.0",
     "mypy-baseline>=0.6.1",
+    "pre-commit>=3.6.0",
 ]
 requires-python = ">=3.12,<4.0"
 readme = "README.md"
@@ -43,3 +44,37 @@ license = {text = "MIT"}
 [build-system]
 requires = ["pdm-backend"]
 build-backend = "pdm.backend"
+
+[tool.mypy] # https://mypy.readthedocs.io/en/stable/config_file.html
+disable_error_code = ['explicit-override']
+explicit_package_bases = true
+implicit_reexport = true  # https://github.com/konradhalas/dacite/issues/133#issuecomment-1186549192
+no_implicit_optional = true
+ignore_missing_imports = true
+follow_imports = "skip"
+disallow_untyped_defs = true
+disallow_any_expr = false
+disallow_any_explicit = false
+disallow_any_decorated = false
+
+disallow_subclassing_any = false
+disallow_any_unimported = false
+disallow_untyped_calls = false
+
+baseline_file = "./baselines/mypy"
+exclude = [
+    '\.git',
+    '\.cache',
+    '\.mypy_cache',
+    '\.pytest_cache',
+    '\.prospector',
+    '\.gitlab',
+    'charts',
+    'metabase',
+    'docs',
+    'grafana',
+    '\.idea',
+    '__pycache__\/',
+    'migrations\/',
+    "venv",
+]

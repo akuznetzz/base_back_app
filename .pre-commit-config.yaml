@@ -1,0 +1,15 @@
+#exclude: ^(migrations/.*|scripts/.*)$
+exclude: ^(migrations/.*)$
+
+repos:
+
+- repo: local
+
+  hooks:
+
+    - id: mypy
+      name: mypy
+      entry: mypy
+      language: system
+      types: [python]
+      require_serial: true
