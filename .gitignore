@@ -1,0 +1,9 @@
+.idea/
+**.vscode
+*.tmp
+/check.sh
+/git_wrapper.sh
+/docker/db/data
+/docker/db/share
+/**/venv
+__pycache__

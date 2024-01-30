@@ -1,0 +1,6 @@
+.idea/
+**.vscode
+*.tmp
+/check.sh
+/git_wrapper.sh
+__pycache__
