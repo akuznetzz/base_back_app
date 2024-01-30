@@ -1,4 +1,4 @@
-from utils.mixins.TimestampMixin import TimestampMixin
+from common.mixins.TimestampMixin import TimestampMixin
 
 
 class AbstractBaseModel(TimestampMixin):

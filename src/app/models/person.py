@@ -2,8 +2,8 @@ from django.db import models
 
 from django.utils.translation import gettext_lazy as _
 
-from utils.helpers.AbstractBaseModel import AbstractBaseModel
-from utils.helpers.create_char_field import create_char_field
+from common.helpers.AbstractBaseModel import AbstractBaseModel
+from common.helpers.create_char_field import create_char_field
 
 
 class Person(AbstractBaseModel):

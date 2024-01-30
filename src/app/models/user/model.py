@@ -3,8 +3,8 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 from app.models.person import Person
-from app.models.user.UserManager import UserManager
-from utils.mixins.TimestampMixin import TimestampMixin
+from app.models.user.manager import UserManager
+from common.mixins.TimestampMixin import TimestampMixin
 
 
 class User(AbstractUser, TimestampMixin):
