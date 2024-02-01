@@ -10,3 +10,6 @@ Package and dependency manager - PDM
 * After cloning project come to `.src` dir and run `pdm install` 
 
 #### Run django project as usual!
+
+## To check
+* pre-commit 
