@@ -17,5 +17,5 @@ class Person(AbstractBaseModel):
     birth_date = models.DateField(verbose_name=_('birth date'), null=True, blank=True)
     birth_place = create_char_field(max_length=255, verbose_name=_('birth place'), blank=True)
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f'{self.last_name} {self.first_name} {self.middle_name}'

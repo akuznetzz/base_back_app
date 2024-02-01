@@ -32,9 +32,8 @@ dependencies = [
     "djangorestframework<4.0.0,>=3.14.0",
     "psycopg[binary]<4.0.0,>=3.1.17",
     "dynamic-rest @ file:///${PROJECT_ROOT}/dynamic-rest-master",
-    "mypy>=1.8.0",
-    "mypy-baseline>=0.6.1",
     "pre-commit>=3.6.0",
+    "basedmypy>=2.4.0",
 ]
 requires-python = ">=3.12,<4.0"
 readme = "README.md"
@@ -61,7 +60,6 @@ disallow_subclassing_any = false
 disallow_any_unimported = false
 disallow_untyped_calls = false
 
-baseline_file = "./baselines/mypy"
 exclude = [
     '\.git',
     '\.cache',
@@ -77,4 +75,5 @@ exclude = [
     '__pycache__\/',
     'migrations\/',
     "venv",
+    "dynamic-rest-master"
 ]

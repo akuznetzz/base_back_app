@@ -15,7 +15,7 @@ class User(AbstractUser, TimestampMixin):
     email = models.EmailField(_('email address'), unique=True)
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = []
+    REQUIRED_FIELDS: list[str] = []
 
     first_name = None
     last_name = None

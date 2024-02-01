@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["cross_platform", "inherit_metadata"]
 lock_version = "4.4.1"
-content_hash = "sha256:ccde3ceba6a85a77ea2b57413efdd7751114b381004bcbc76bc3de67e91dad78"
+content_hash = "sha256:58b1c0541a363686aeed348c1897a10edad434906b6165c7e3d76e8e2ac221e4"
 
 [[package]]
 name = "asgiref"
@@ -16,6 +16,41 @@ groups = ["default"]
 files = [
     {file = "asgiref-3.7.2-py3-none-any.whl", hash = "sha256:89b2ef2247e3b562a16eef663bc0e2e703ec6468e2fa8a5cd61cd449786d4f6e"},
     {file = "asgiref-3.7.2.tar.gz", hash = "sha256:9e0ce3aa93a819ba5b45120216b23878cf6e8525eb3848653452b4192b92afed"},
+]
+
+[[package]]
+name = "basedmypy"
+version = "2.4.0"
+requires_python = ">=3.8"
+summary = "Based static typing for Python"
+groups = ["default"]
+dependencies = [
+    "basedtyping>=0.0.3",
+    "mypy-extensions>=1.0.0",
+    "typing-extensions>=4.1.0",
+]
+files = [
+    {file = "basedmypy-2.4.0-cp312-cp312-macosx_10_9_x86_64.whl", hash = "sha256:ea0ebbcdb43ec70f76090879a1acf2bc41e32cd265f9e952ead4def94bf99ddc"},
+    {file = "basedmypy-2.4.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:81885610e7041db5ec237675cfeb1632c6bbb883057e0e9c3e8faefaea2ab424"},
+    {file = "basedmypy-2.4.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:3c56bb2e40e60cd816781921e0eb66395892134238bb4ee4160824264fb393bd"},
+    {file = "basedmypy-2.4.0-cp312-cp312-musllinux_1_1_x86_64.whl", hash = "sha256:518c27cca18dbb800be95b42432e48296eb559206c1e8d6c474f6d6f0ea09d30"},
+    {file = "basedmypy-2.4.0-cp312-cp312-win_amd64.whl", hash = "sha256:32aeb7a69b045a67e618903a4ef74252f5b3684f0b936966b463c2e0d22ba9b8"},
+    {file = "basedmypy-2.4.0-py3-none-any.whl", hash = "sha256:d72942f88c72c85fe9d13bd89c7c428d5b9a392b5c4a107e7fe323feec9e9098"},
+    {file = "basedmypy-2.4.0.tar.gz", hash = "sha256:489daaa7d6e2fdfe3db068ea499390f18d00fda66bccb273aaffc95e0768ac22"},
+]
+
+[[package]]
+name = "basedtyping"
+version = "0.1.3"
+requires_python = ">=3.8,<4.0"
+summary = "Utilities for basedmypy"
+groups = ["default"]
+dependencies = [
+    "typing-extensions<5.0,>=4.1",
+]
+files = [
+    {file = "basedtyping-0.1.3-py3-none-any.whl", hash = "sha256:cf5b27ba62b463bd8931098194b8c27baf7a28d72421c7b8382a60380d82fa08"},
+    {file = "basedtyping-0.1.3.tar.gz", hash = "sha256:0e89fb79fbcc124898de6990267c0600fb0506ce2f1f4e8de9999a798a375962"},
 ]
 
 [[package]]
@@ -175,37 +210,6 @@ groups = ["default"]
 files = [
     {file = "inflection-0.5.1-py2.py3-none-any.whl", hash = "sha256:f38b2b640938a4f35ade69ac3d053042959b62a0f1076a5bbaa1b9526605a8a2"},
     {file = "inflection-0.5.1.tar.gz", hash = "sha256:1a29730d366e996aaacffb2f1f1cb9593dc38e2ddd30c91250c6dde09ea9b417"},
-]
-
-[[package]]
-name = "mypy"
-version = "1.8.0"
-requires_python = ">=3.8"
-summary = "Optional static typing for Python"
-groups = ["default"]
-dependencies = [
-    "mypy-extensions>=1.0.0",
-    "typing-extensions>=4.1.0",
-]
-files = [
-    {file = "mypy-1.8.0-cp312-cp312-macosx_10_9_x86_64.whl", hash = "sha256:52825b01f5c4c1c4eb0db253ec09c7aa17e1a7304d247c48b6f3599ef40db8bd"},
-    {file = "mypy-1.8.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:f5ac9a4eeb1ec0f1ccdc6f326bcdb464de5f80eb07fb38b5ddd7b0de6bc61e55"},
-    {file = "mypy-1.8.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:afe3fe972c645b4632c563d3f3eff1cdca2fa058f730df2b93a35e3b0c538218"},
-    {file = "mypy-1.8.0-cp312-cp312-musllinux_1_1_x86_64.whl", hash = "sha256:42c6680d256ab35637ef88891c6bd02514ccb7e1122133ac96055ff458f93fc3"},
-    {file = "mypy-1.8.0-cp312-cp312-win_amd64.whl", hash = "sha256:720a5ca70e136b675af3af63db533c1c8c9181314d207568bbe79051f122669e"},
-    {file = "mypy-1.8.0-py3-none-any.whl", hash = "sha256:538fd81bb5e430cc1381a443971c0475582ff9f434c16cd46d2c66763ce85d9d"},
-    {file = "mypy-1.8.0.tar.gz", hash = "sha256:6ff8b244d7085a0b425b56d327b480c3b29cafbd2eff27316a004f9a7391ae07"},
-]
-
-[[package]]
-name = "mypy-baseline"
-version = "0.6.1"
-requires_python = ">=3.8"
-summary = "Integrate mypy with existing codebase."
-groups = ["default"]
-files = [
-    {file = "mypy_baseline-0.6.1-py3-none-any.whl", hash = "sha256:3a2c3646bdb57fc6753599b7a67b58836924c9132208ab41f14260ab510a60c6"},
-    {file = "mypy_baseline-0.6.1.tar.gz", hash = "sha256:2f594edf1489aa6bd5403d5183127f3fc045a591b9d6aa91530f0d7cfe61de01"},
 ]
 
 [[package]]
