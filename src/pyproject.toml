@@ -1,19 +1,3 @@
-[tool.poetry]
-name = "core-app"
-version = "0.1.0"
-description = ""
-authors = ["Alex Kuznetsov"]
-readme = "README.md"
-
-[tool.poetry.dependencies]
-python = "^3.12"
-django = "^5.0.1"
-djangorestframework = "^3.14.0"
-psycopg = {extras = ["binary"], version = "^3.1.17"}
-dynamic-rest = {path = "dynamic-rest-master", develop = true}
-
-
-
 [tool.pdm]
 distribution = false
 
@@ -34,6 +18,8 @@ dependencies = [
     "dynamic-rest @ file:///${PROJECT_ROOT}/dynamic-rest-master",
     "pre-commit>=3.6.0",
     "basedmypy>=2.4.0",
+    "reorder-python-imports>=3.12.0",
+    "ruff>=0.1.15",
 ]
 requires-python = ">=3.12,<4.0"
 readme = "README.md"
@@ -76,4 +62,29 @@ exclude = [
     'migrations\/',
     "venv",
     "dynamic-rest-master"
+]
+
+[tool.ruff]
+select = ["E", "F", "B", "Q", "T", "N", "UP", "W", "C90", "COM", "PYI", "RSE", "RET", "SIM", "TID", "TCH", "ARG", "PT",
+    "PTH", "ERA", "PGH", "PL", "TRY", "RUF", "ANN", "S", "BLE", "C4", "PIE",
+    # "D" – будет требовать docstrings для публичных классов, методов и функций
+    # "INP" – будет сообщать, что модуль расположен в каталоге, где нет init.py. — Спорно...
+    # "G" – запретит использовать форматирование в при логгинге
+    # "DTZ" – утомит требованиями таймзоны при манипуляциях с дататми
+]
+
+line-length = 120
+ignore = ["RUF001", "RUF003", "D203", "D213", "ANN101", "ANN102", "ANN401", "S101", "ANN201", "ANN003"]
+exclude = ["migrations", "dynamic-rest-master", "tests", "manage.py"]
+
+[tool.ruff_wrapper]
+baseline_file = './baselines/ruff'
+
+[tool.ruff.flake8-quotes]
+inline-quotes = "single"
+multiline-quotes = "single"
+
+[tool.ruff.per-file-ignores]
+"tests/**/test_*.py" = [
+     "ANN001", "PGH004", "ANN201", "PLR0913", "BLE001",
 ]
