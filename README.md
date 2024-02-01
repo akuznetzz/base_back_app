@@ -11,5 +11,9 @@ Package and dependency manager - PDM
 
 #### Run django project as usual!
 
-## To check
+## To check after installation
 * pre-commit 
+
+### To tune later
+* ruff linter
+* ruff formater (using instead of black)
