@@ -1,8 +1,10 @@
 import functools
 
-from django.core.signing import dumps, loads
+from django.core.signing import dumps
+from django.core.signing import loads
 from rest_framework import status
-from rest_framework.permissions import IsAuthenticated, BasePermission
+from rest_framework.permissions import BasePermission
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 

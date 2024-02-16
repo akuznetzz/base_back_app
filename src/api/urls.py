@@ -1,17 +1,16 @@
-from api.me import MeView
-from api.router import router
 from django.urls import include
 from django.urls import path
-
-from api.signed_urls import SignedUrlsView
-from auth.views import TokenObtainPairView
 from rest_framework_simplejwt.views import TokenRefreshView
 from rest_framework_simplejwt.views import TokenVerifyView
 
+from api.me import MeView
+from api.router import router
+from api.signed_urls import SignedUrlsView
+from auth.views import TokenObtainPairView
 from common.drest_helpers.drest_select import drest_select_enpoint
 from named_views.utils import get_fresh_base_table_view_data
-from named_views.utils.base_table_view_utils import get_fresh_context_view_params_data, \
-    get_fresh_default_table_view_descr
+from named_views.utils.base_table_view_utils import get_fresh_context_view_params_data
+from named_views.utils.base_table_view_utils import get_fresh_default_table_view_descr
 
 urlpatterns = [
     path('', include(router.urls)),
