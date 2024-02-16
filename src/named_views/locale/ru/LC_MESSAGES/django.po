@@ -1,0 +1,108 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-12 20:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: mixins/named_view_element_mixin.py:18
+#: models/NamedView/NamedViewSerializer.py:15
+#: models/named_filter/named_filter_serializer.py:15
+msgid "user"
+msgstr "пользователь"
+
+#: mixins/named_view_element_mixin.py:25
+#: models/BaseTableView/BaseTableView.py:14
+#: models/context_view_params/model.py:14
+msgid "table_type"
+msgstr "таблица"
+
+#: mixins/named_view_element_mixin.py:29
+msgid "view name"
+msgstr "имя представления"
+
+#: mixins/named_view_element_mixin.py:34
+#: models/BaseTableView/BaseTableView.py:17
+msgid "view text"
+msgstr "текст представления"
+
+#: mixins/named_view_element_mixin.py:35
+#: models/BaseTableView/BaseTableView.py:18
+msgid "View data: JSON object representation for a view data."
+msgstr "Данные представления: JSON представление данных."
+
+#: mixins/named_view_element_mixin.py:52
+msgid "there is already a view with the same name!"
+msgstr "Представление с таким именем уже имеется!"
+
+#: models/BaseTableView/BaseTableView.py:11
+msgid "base table view"
+msgstr "базовое представление"
+
+#: models/BaseTableView/BaseTableView.py:12
+msgid "base table views"
+msgstr "базовые представления"
+
+#: models/BaseTableView/BaseTableView.py:22 models/NamedView/NamedView.py:18
+#: models/context_view_params/model.py:16
+msgid "view context"
+msgstr "контекст представления"
+
+#: models/BaseTableView/BaseTableViewSerializer.py:10
+#: models/NamedView/NamedViewSerializer.py:17
+#: models/context_view_params/serializer.py:10
+#: models/named_filter/named_filter_serializer.py:17
+msgid "TableTypes"
+msgstr "Таблица"
+
+#: models/NamedView/NamedView.py:9
+msgid "named view"
+msgstr "именованное представление"
+
+#: models/NamedView/NamedView.py:10
+msgid "named views"
+msgstr "именованные представления"
+
+#: models/context_view_params/model.py:11
+#: models/context_view_params/model.py:12
+msgid "context view params"
+msgstr "контекстные параметры представления"
+
+#: models/context_view_params/model.py:19
+msgid "view params"
+msgstr "параметры представления"
+
+#: models/context_view_params/model.py:20
+msgid "View params data: JSON object representation for a view params."
+msgstr "Параметры представления: JSON представление параметров представления."
+
+#: models/named_filter/named_filter.py:9
+msgid "named filter"
+msgstr "именованный фильтр"
+
+#: models/named_filter/named_filter.py:10
+msgid "named filters"
+msgstr "именованные фильтры"
+
+#: models/named_filter/named_filter.py:20
+msgid "context"
+msgstr "контекст"
+
+#: utils/base_table_view_utils.py:25
+msgid "Request parameters not defined."
+msgstr "Не заданы параметры запроса."
